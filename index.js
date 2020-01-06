@@ -7,7 +7,7 @@ try {
   console.log("semanticVer: ", semanticVersion);
   console.log("version Type: ", versionType);
 
-  //   core.setOutput("time", time);
+  //   core.setOutput("time", time); 
 } catch (error) {
   core.setFailed(error.message);
 }

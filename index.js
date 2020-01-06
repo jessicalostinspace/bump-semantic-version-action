@@ -7,6 +7,22 @@ try {
   console.log("semanticVer: ", semanticVersion);
   console.log("version Type: ", versionType);
 
+  switch(versionType) {
+    case 'MAJOR':
+      let re = /(?<![\.\d])\d+/;
+      const majorNumber = semanticVersion.match(re);
+      console.log(majorNumber);
+      // semanticVersion = ;
+      break;
+    case 'MINOR':
+      // semanticVersion = ;
+      break;
+    case 'PATCH':
+      break;
+    default:
+      // semanticVersion = ;
+  }
+
   //   core.setOutput("time", time);
 } catch (error) {
   core.setFailed(error.message);

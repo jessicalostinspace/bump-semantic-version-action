@@ -7,19 +7,22 @@ try {
   console.log("semanticVer: ", semanticVersion);
   console.log("version Type: ", versionType);
 
+  const majorNumber = semanticVersion.toString().split(".")[0];
+  const minorNumber = semanticVersion.toString().split(".")[1];
+  const patchNumber = semanticVersion.toString().split(".")[2];
+
   switch(versionType) {
     case 'MAJOR':
-      let re = /(?<![\.\d])\d+/;
-      const majorNumber = semanticVersion.match(re);
-      console.log(majorNumber);
       // semanticVersion = ;
       break;
     case 'MINOR':
       // semanticVersion = ;
+      console.log(minorNumber)
       break;
     case 'PATCH':
       break;
     default:
+      console.log('went to default')
       // semanticVersion = ;
   }
 

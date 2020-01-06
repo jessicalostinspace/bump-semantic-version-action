@@ -11,28 +11,27 @@ try {
   let minorNumber = semanticVersion.toString().split(".")[1];
   let patchNumber = semanticVersion.toString().split(".")[2];
 
+  let newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
   switch(versionType) {
     case 'MAJOR':
       majorNumber = majorNumber + 1;
-      const newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
+      newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
       core.setOutput("bumped-semantic-version", newSemanticVersion);
       break;
     case 'MINOR':
       minorNumber = minorNumber + 1;
-      const newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
+      newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
       core.setOutput("bumped-semantic-version", newSemanticVersion);
       console.log("newSemVer: ", newSemanticVersion)
       break;
     case 'PATCH':
       patchNumber = patchNumber + 1;
-      const newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
+      newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
       core.setOutput("bumped-semantic-version", newSemanticVersion);
       break;
     default:
       core.setFailed("Could not process the version type. Make sure your string is either 'MAJOR', 'MINOR', or 'PATCH'.");
   }
-
-  //   core.setOutput("time", time);
 } catch (error) {
   core.setFailed(error.message);
 }

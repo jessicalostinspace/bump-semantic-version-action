@@ -1,11 +1,8 @@
 const core = require('@actions/core');
 
 try {
-  // `who-to-greet` input defined in action metadata file
   const semanticVersion = core.getInput('semantic-version');
   const versionType = core.getInput('version-type').toUpperCase();
-  console.log("semanticVer: ", semanticVersion);
-  console.log("version Type: ", versionType);
 
   let majorNumber = semanticVersion.toString().split(".")[0];
   let minorNumber = semanticVersion.toString().split(".")[1];

@@ -14,18 +14,18 @@ try {
   let newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
   switch(versionType) {
     case 'MAJOR':
-      majorNumber = majorNumber + 1;
+      majorNumber = parseInt(majorNumber, 10) + 1;
       newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
       core.setOutput("bumped-semantic-version", newSemanticVersion);
       break;
     case 'MINOR':
-      minorNumber = minorNumber + 1;
+      minorNumber = parseInt(minorNumber, 10) + 1;
       newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
       core.setOutput("bumped-semantic-version", newSemanticVersion);
       console.log("newSemVer: ", newSemanticVersion)
       break;
     case 'PATCH':
-      patchNumber = patchNumber + 1;
+      patchNumber = parseInt(patchNumber, 10) + 1;
       newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
       core.setOutput("bumped-semantic-version", newSemanticVersion);
       break;

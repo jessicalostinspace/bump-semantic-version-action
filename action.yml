@@ -1,0 +1,20 @@
+name: 'Bump Semantic Version'
+author: "Jessica Wilson"
+description: 'Returns a bumped semantic version given a version and major, minor, or patch string'
+inputs:
+  semantic-version:
+    description: 'A semantic version you want to increase'
+    required: true
+  version-type:
+    description: 'MAJOR, MINOR, or PATCH'
+    required: true
+    default: 'MINOR'
+outputs:
+  bumped-semantic-version:
+    description: 'The bumped semantic version'
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: 'arrow-up'
+  color: 'yellow'

@@ -1,0 +1,33 @@
+{
+  "name": "bump-semantic-version-action",
+  "version": "1.0.0",
+  "description": "Bumps a semantic version given a version and semantic bump type",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicalostinspace/bump-semantic-version-action.git"
+  },
+  "keywords": [
+    "semantic",
+    "version",
+    "versioning",
+    "version",
+    "bump",
+    "major",
+    "minor",
+    "patch"
+  ],
+  "author": "Jessica Wilson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessicalostinspace/bump-semantic-version-action/issues"
+  },
+  "homepage": "https://github.com/jessicalostinspace/bump-semantic-version-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^2.0.0"
+  }
+}

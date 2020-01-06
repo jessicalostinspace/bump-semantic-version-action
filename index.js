@@ -8,7 +8,6 @@ try {
   let minorNumber = semanticVersion.toString().split(".")[1];
   let patchNumber = semanticVersion.toString().split(".")[2];
 
-  const newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
   switch(versionType) {
     case 'MAJOR':
       majorNumber = parseInt(majorNumber, 10) + 1;

@@ -3,7 +3,7 @@ const core = require('@actions/core');
 try {
   // `who-to-greet` input defined in action metadata file
   const semanticVersion = core.getInput('semantic-version');
-  const versionType = core.getInput('version-type');
+  const versionType = core.getInput('version-type').toUpperCase();
   console.log("semanticVer: ", semanticVersion);
   console.log("version Type: ", versionType);
 
@@ -14,12 +14,14 @@ try {
   switch(versionType) {
     case 'MAJOR':
       // semanticVersion = ;
+      console.log(majorNumber)
       break;
     case 'MINOR':
       // semanticVersion = ;
       console.log(minorNumber)
       break;
     case 'PATCH':
+      console.log(patchNumber)
       break;
     default:
       console.log('went to default')

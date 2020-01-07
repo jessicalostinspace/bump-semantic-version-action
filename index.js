@@ -22,6 +22,7 @@ try {
     case 'PATCH':
       patchNumber = parseInt(patchNumber, 10) + 1;
       newSemanticVersion = majorNumber + "." + minorNumber + "." + patchNumber;
+
       break;
     default:
       core.setFailed("Could not process the version type. Make sure your string is either 'MAJOR', 'MINOR', or 'PATCH'.");

@@ -23,7 +23,7 @@ The bumped semantic version.
 
     name: Get Bumped Semantic Version
       id: bsv
-      uses: ./
+      uses: jessicalostinspace/bump-semantic-version-action@v1.0.1
       with:
         semantic-version: ${{ steps.lrb.outputs.last-semver }}
         version-type: 'MINOR'
